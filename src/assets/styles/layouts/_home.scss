@@ -2,56 +2,297 @@
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
+// ================================ Mi CSS
+
+.bodyportada {
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
+  color: $uoc-corporate;
   background-color: $uoc-bg;
-  color: $uoc-corporate;
+  
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
+nav {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.nav-link.active {
+  font-size: large;
+  color: red;
+}
+
+.nav-link {
+  color: brown;
+}
+
+.img-thumbnail.logotenistop {
+  width: 7%;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  border: transparent;
+  
+}
+
+.img-thumbnail.logotenisbot {
+  width: 4%;
+  background-color: transparent;
+  border: transparent;
+}
+
+.boxprincipalportada {
+  margin: 2rem;
   text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  
+  .headerportada {
+    font-size: xx-large;
   }
-}
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  .pportada {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    text-align: justify;
   }
 }
 
 .uoc-footer {
+  justify-content: center;
   margin-top: 1.5rem;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
+}
+
+// ================================ CSS GRID para la portada
+
+
+@supports(display: grid) {
+
+  .bodyportada {
+    display: grid;
+    grid-template-rows: 15vh 115vh 40vh 15vh;
+    grid-template-columns: 20vw 60vw 20vw;
+    font-family: $font-family-sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: $uoc-corporate;
+    background-color: $uoc-bg;
+  }
+  
+  nav {
+    grid-row: 1;
+    grid-column: 2;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+  
+  .img-thumbnail.logotenistop {
+    grid-row: 1;
+    grid-column: 1;
+    width: 7%;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    border: transparent;
+  }
+  
+  .img-thumbnail.logotenisbot {
+    grid-row: 4;
+    grid-column: 2;
+    width: 5%;
+    background-color: transparent;
+    border: transparent;
+  }
+
+  .img-fluid.wallpaper {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+  
+  .boxprincipalportada {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    width:fit-content;
+    margin: 4rem;
+    text-align: center;
+  
+    .headerportada {
+      font-size: xx-large;
+    }
+  
+    .pportada {
+      margin-top: 2rem;
+      margin-right: 10rem;
+      margin-left: 10rem;
+      text-align: justify;
+    }
+  }
+  
+  nav.uoc-footer {
+    grid-row: 3;
+    grid-column: 1;
+    justify-content: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+// ============================== RESTO DE PAGINAS
+
+.bodypaginas {
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $uoc-corporate;
+  background-color: $uoc-bg;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.boxprincipal {
+  margin: 2rem;
+  text-align: center;
+
+  h1 {
+    margin-top: 2rem;
+    font-size: x-large;
+  }
+
+  p {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    text-align: justify;
+  }
+}
+
+.img-fluid.raqueta {
+  border-radius: 4%;
+}
+
+.img-fluid.entrevista {
+  width: 43%;
+  border-radius: 4%;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote:has(> p) {
+  color: lightcoral;
+  font-style: italic;
+}
+
+#tarjeta {
+  justify-content: center;
+  margin-left: 27%;
   text-align: center;
 }
+
+// ============================== FLEX DE PARTICIPANTES
+
+
+.boxjugadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background-color: #f2f2f2;
+}
+
+.jugador {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imgjugador {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.headerjugador {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.pjugador {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.boxdesplegable {
+  justify-content: center;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.boxaparece {
+  margin-left: 40%;
+}
+
+#textoflotante {
+  justify-content: center;
+  text-align: center;
+}
+
+// ============================== NUEVAS UNIDADES Y COLORES (PAGINA MULTIMEDIA)
+
+.boxmultimedia {
+  margin: 2rem;
+  text-align: center;
+
+  h1 {
+    margin-top: 2rem;
+    font-size: x-large;
+    color: lab(150% -400 400) // Nueva función de color.
+  }
+
+  p {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    font-size: 1.1cqi; //Nueva unidad.
+    text-align: justify;
+  }
+
+  button {
+    color: green;
+    border-color: black;
+    border-radius: 15%;
+  }
+}
+
+// ============================== CONTAINER QUERY
+
+@container (min-width: 1200px) {
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+}
+
