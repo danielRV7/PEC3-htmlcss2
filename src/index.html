@@ -11,9 +11,15 @@
   <body class="bodypaginas">
 
     <nav class="nav">
-      <img src="./assets/images/logotenis.png" class="img-thumbnail logotenistop" alt="logotenis">
-      <a class="nav-link" href="./index.html">Participantes</a>
-      <a class="nav-link" href="./multimedia.html">Multimedia</a>
+      <ul class="flex">
+        <img src="./assets/images/logotenis.png" class="img-thumbnail logotenistop" alt="logotenis">
+        <li class="mr-6">
+          <a class="text-amber-700" id="activeIndex" href="./index.html">Participantes</a>
+        </li>
+        <li class="mr-6">
+          <a class="text-amber-700" href="./multimedia.html">Multimedia</a>
+        </li>
+      </ul>
     </nav>
 
     <div class="boxjugadores">
@@ -70,23 +76,20 @@
 
     </div>
 
-    <div class="boxdesplegable">
-      <p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Secreto Djokovic
-        </button>
-      </p>
-      <div class="boxaparece" style="min-height: 120px;">
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-          <div class="card card-body" id="textoflotante" style="width: 300px;">
-            Novak Djokovic ha declarado que su torneo favorito anualmente es el PureSkill. Y no es para menos, el jugador serbio ha ganado
-            en 9 de las 10 ediciones que se lleva disputando este evento. 
-          </div>
-        </div>
-      </div>
-    </div>
+    <footer>
+      <nav class="nav">
+          <ul class="flex">
+            <img src="./assets/images/logotenis.png" class="img-thumbnail logotenisbot" alt="logotenis">
+            <li class="mr-6">
+              <a class="text-amber-700" href="./index.html">Participantes</a>
+            </li>
+            <li class="mr-6">
+              <a class="text-amber-700" href="./multimedia.html">Multimedia</a>
+            </li>
+          </ul>
+      </nav>
+    </footer>
 
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
