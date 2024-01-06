@@ -2,7 +2,16 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '120': '30rem',
+        '132': '33rem',
+        '156': '40rem'
+      },
+      colors: {
+        'fluorescente': '#17fc03'
+      }
+    },
   },
   plugins: [],
 }
