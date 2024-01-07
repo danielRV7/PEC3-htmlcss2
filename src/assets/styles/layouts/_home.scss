@@ -2,5 +2,14 @@
   box-sizing: border-box;
 }
 
+@layer components {
 
+  .btn-secret {
+    @apply bg-pink-200 hover:bg-pink-400 text-black py-2 px-4 rounded ml-156 mt-10;
+  }
+
+  .btn-like {
+    @apply bg-transparent border-black border text-green-800 py-2 px-4 rounded mt-10;
+  }
+}
 
